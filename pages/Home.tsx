@@ -54,7 +54,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct, onQuickView, a
         { name: 'เครื่องประดับ' },
     ];
 
-    const featuredProducts: Product[] = allProducts.sort(() => 0.5 - Math.random()).slice(0, 14);
+    const featuredProducts: Product[] = [...allProducts].sort(() => 0.5 - Math.random()).slice(0, 14);
 
     const valueProps = [
         {
