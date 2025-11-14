@@ -705,7 +705,7 @@ const App: React.FC = () => {
                   />;
         case 'product-detail':
           if (selectedProduct) {
-            return <ProductDetail product={selectedProduct} onBack={handleBackToList} onSelectProduct={handleSelectProduct} allProducts={allProducts} onAddToCart={handleAddToCart} />;
+            return <ProductDetail product={selectedProduct} onBack={handleBackToList} onSelectProduct={handleSelectProduct} allProducts={allProducts} onAddToCart={handleAddToCart} onQuickView={handleOpenQuickView} />;
           }
           return <AllProducts products={filteredAndSortedProducts} onSelectProduct={handleSelectProduct} onQuickView={handleOpenQuickView} searchQuery={searchQuery} onClearSearch={handleClearSearch} allCategories={allCategories} allProvinces={allProvinces} selectedCategories={selectedCategories} selectedProvinces={selectedProvinces} sortOption={sortOption} onCategoryChange={setSelectedCategories} onProvinceChange={setSelectedProvinces} onSortChange={setSortOption} />;
         case 'cart':

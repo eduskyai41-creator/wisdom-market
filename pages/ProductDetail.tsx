@@ -10,6 +10,7 @@ interface ProductDetailProps {
   onBack: () => void;
   onSelectProduct: (product: Product) => void;
   onAddToCart: (product: Product, quantity: number) => void;
+  onQuickView: (product: Product) => void;
 }
 
 
@@ -32,7 +33,7 @@ const StarRating: React.FC<{ rating: number, reviewCount: number }> = ({ rating,
     );
 };  
 
-const ProductDetail: React.FC<ProductDetailProps> = ({ product, allProducts, onBack, onSelectProduct, onAddToCart }) => {
+const ProductDetail: React.FC<ProductDetailProps> = ({ product, allProducts, onBack, onSelectProduct, onAddToCart, onQuickView }) => {
   const [quantity, setQuantity] = useState(1);
   const [activeImage, setActiveImage] = useState(product.images[0]);
   const addToast = useToast();
@@ -206,7 +207,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, allProducts, onB
             <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">สินค้าอื่นที่น่าสนใจ</h2>
             <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
               {relatedProducts.map(p => (
-                <ProductCard key={p.id} product={p} onSelect={onSelectProduct} onQuickView={() => { /* Quick View not available from detail page */ }} />
+                <ProductCard key={p.id} product={p} onSelect={onSelectProduct} onQuickView={onQuickView} />
               ))}
             </div>
           </div>
