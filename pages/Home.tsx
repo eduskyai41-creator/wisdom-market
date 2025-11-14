@@ -1,6 +1,6 @@
 import React from 'react';
-import ProductCard from '../components/ProductCard';
-import { Product, Page } from '../types';
+import ProductCard from '../components/ProductCard.tsx';
+import { Product, Page } from '../types.ts';
 
 interface HomeProps {
     onNavigate: (page: Page) => void;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { CartItem, Page } from '../types';
+import { CartItem, Page } from '../types.ts';
 
 interface CartPageProps {
   cartItems: CartItem[];

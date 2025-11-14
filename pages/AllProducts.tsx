@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Product, SortOption } from '../types';
-import ProductCard from '../components/ProductCard';
+import { Product, SortOption } from '../types.ts';
+import ProductCard from '../components/ProductCard.tsx';
 
 interface AllProductsProps {
   products: Product[];

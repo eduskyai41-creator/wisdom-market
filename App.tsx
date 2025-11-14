@@ -1,18 +1,18 @@
 
 import React, { useState, useMemo } from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import { AllProducts } from './pages/AllProducts';
-import ProductDetail from './pages/ProductDetail';
-import CartPage from './pages/Cart';
-import About from './pages/About';
-import Stories from './pages/Stories';
-import Confirmation from './pages/Confirmation';
-import QuickViewModal from './components/QuickViewModal';
-import ToastContainer from './components/ToastContainer';
-import { Product, Page, CartItem, SortOption } from './types';
-import { useToast } from './hooks/useToast';
+import Header from './components/Header.tsx';
+import Footer from './components/Footer.tsx';
+import Home from './pages/Home.tsx';
+import { AllProducts } from './pages/AllProducts.tsx';
+import ProductDetail from './pages/ProductDetail.tsx';
+import CartPage from './pages/Cart.tsx';
+import About from './pages/About.tsx';
+import Stories from './pages/Stories.tsx';
+import Confirmation from './pages/Confirmation.tsx';
+import QuickViewModal from './components/QuickViewModal.tsx';
+import ToastContainer from './components/ToastContainer.tsx';
+import { Product, Page, CartItem, SortOption } from './types.ts';
+import { useToast } from './hooks/useToast.ts';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>('home');

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Product, Page } from '../types';
+import { Product, Page } from '../types.ts';
 
 interface QuickViewModalProps {
     product: Product | null;

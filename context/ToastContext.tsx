@@ -1,5 +1,5 @@
 import React, { createContext, useState, useCallback, useContext } from 'react';
-import { ToastMessage } from '../types';
+import { ToastMessage } from '../types.ts';
 
 type ToastContextType = {
   toasts: ToastMessage[];

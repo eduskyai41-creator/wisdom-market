@@ -1,8 +1,9 @@
 
+
 import React, { useState, useEffect } from 'react';
-import { Product } from '../types';
-import ProductCard from '../components/ProductCard';
-import { useToast } from '../hooks/useToast';
+import { Product } from '../types.ts';
+import ProductCard from '../components/ProductCard.tsx';
+import { useToast } from '../hooks/useToast.ts';
 
 interface ProductDetailProps {
   product: Product;
