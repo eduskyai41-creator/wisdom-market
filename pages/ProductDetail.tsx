@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Product } from '../types';
 import ProductCard from '../components/ProductCard';
@@ -62,8 +63,8 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, allProducts, onB
       } else {
         // Fallback for desktop browsers
         await navigator.clipboard.writeText(shareData.url);
+        // FIX: Removed `id` property as it's handled by the context provider.
         addToast({
-            id: Date.now(),
             type: 'info',
             title: 'คัดลอกลิงก์แล้ว',
             message: 'คุณสามารถวางลิงก์เพื่อแชร์ได้เลย',
@@ -71,8 +72,8 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, allProducts, onB
       }
     } catch (err) {
       console.error("Error sharing", err);
+      // FIX: Removed `id` property as it's handled by the context provider.
       addToast({
-        id: Date.now(),
         type: 'error',
         title: 'เกิดข้อผิดพลาด',
         message: 'ไม่สามารถแชร์ได้ในขณะนี้',

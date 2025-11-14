@@ -1,3 +1,4 @@
+
 import React, { useState, useMemo } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -88,8 +89,8 @@ const App: React.FC = () => {
       }
       return [...prevItems, { ...product, quantity }];
     });
+    // FIX: Removed `id` property as it's handled by the context provider.
     addToast({
-        id: Date.now(),
         type: 'success',
         title: 'เพิ่มสินค้าสำเร็จ!',
         message: `'${product.name}' ถูกเพิ่มลงในตะกร้าแล้ว`,
